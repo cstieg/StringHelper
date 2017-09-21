@@ -32,7 +32,7 @@ namespace StringHelper
 
         public static string ConvertWildcardStringToRegex(string s)
         {
-            return @"\<" + Regex.Escape(s).Replace(@"\?", ".").Replace(@"\*", ".*") + @"\>";
+            return @"\b" + Regex.Escape(s).Replace(@"\?", ".").Replace(@"\*", ".*") + @"\b";
         }
     }
 }
